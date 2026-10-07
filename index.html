@@ -77,10 +77,11 @@
           <div class="status-strip">
             <div>
               <strong id="selectedTypeLabel">未选择字模</strong>
-              <span>点击字模后，在版面格子中落字，也可拖拽字模到版面。</span>
+              <span>点击字模后，在版面格子中落字，也可拖拽字模到版面；落字、换字、清空都按字模库可用枚数核对。</span>
             </div>
             <div id="shortageBadge" class="badge ok">数量充足</div>
           </div>
+          <p id="noticeBar" class="notice" hidden></p>
           <div id="stage" class="stage" aria-label="排版画布"></div>
         </section>
 
@@ -89,6 +90,7 @@
             <h2>草稿与核对</h2>
             <span id="placedCount"></span>
           </div>
+          <div id="conflictBox"></div>
           <div id="usageList" class="usage-list"></div>
           <div class="divider"></div>
           <h3>已保存草稿</h3>

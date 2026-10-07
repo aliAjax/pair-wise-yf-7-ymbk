@@ -325,6 +325,7 @@ h3 {
 }
 
 .cell {
+  position: relative;
   display: grid;
   place-items: center;
   min-width: 0;
@@ -389,6 +390,110 @@ h3 {
 .draft-actions button {
   flex: 1;
   padding: 8px;
+}
+
+.notice {
+  margin: 0 0 12px;
+  border: 1px solid transparent;
+  border-radius: 8px;
+  padding: 10px 12px;
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.notice.ok {
+  border-color: rgba(60, 112, 86, 0.4);
+  background: rgba(60, 112, 86, 0.12);
+  color: var(--green);
+}
+
+.notice.warn {
+  border-color: rgba(164, 64, 55, 0.45);
+  background: rgba(164, 64, 55, 0.1);
+  color: var(--red);
+}
+
+.cell.short {
+  border: 1px dashed var(--red);
+  background: rgba(164, 64, 55, 0.1);
+  color: var(--red);
+}
+
+.cell.short::after {
+  content: "缺";
+  position: absolute;
+  top: 2px;
+  right: 4px;
+  color: var(--red);
+  font-size: 10px;
+  font-weight: 900;
+  line-height: 1;
+}
+
+.qty-row {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  margin-top: 2px;
+}
+
+.qty-row .mini-btn {
+  width: 26px;
+  height: 26px;
+}
+
+.qty-label {
+  color: var(--muted);
+  font-size: 12px;
+  font-weight: 800;
+  white-space: nowrap;
+}
+
+.qty-label.warn-text {
+  color: var(--red);
+}
+
+.type-card.shortage {
+  border-color: var(--red);
+  background: rgba(164, 64, 55, 0.06);
+}
+
+.draft-item.has-gap {
+  border-color: var(--red);
+}
+
+.draft-usage {
+  color: var(--muted);
+  font-size: 12px;
+}
+
+.draft-gap {
+  color: var(--red);
+  font-size: 12px;
+  font-weight: 800;
+}
+
+.conflict-banner {
+  display: grid;
+  gap: 6px;
+  margin-bottom: 12px;
+  border: 1px solid rgba(183, 134, 44, 0.55);
+  border-radius: 8px;
+  background: rgba(183, 134, 44, 0.12);
+  padding: 10px;
+  font-size: 12px;
+}
+
+.conflict-banner strong {
+  color: var(--gold);
+}
+
+.conflict-banner span {
+  color: var(--muted);
+}
+
+.conflict-banner button {
+  padding: 6px 8px;
 }
 
 .divider {

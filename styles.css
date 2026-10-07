@@ -430,3 +430,118 @@ h3 {
     padding: 10px;
   }
 }
+
+/* 操作提示条 */
+.notice {
+  position: fixed;
+  top: 18px;
+  left: 50%;
+  z-index: 60;
+  padding: 10px 16px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: #fffaf1;
+  box-shadow: var(--shadow);
+  font-size: 14px;
+  opacity: 0;
+  pointer-events: none;
+  transform: translateX(-50%) translateY(-16px);
+  transition: opacity 0.2s ease, transform 0.2s ease;
+}
+
+.notice.show {
+  opacity: 1;
+  transform: translateX(-50%) translateY(0);
+}
+
+.notice.ok {
+  border-color: var(--green);
+  color: var(--green);
+}
+
+.notice.err {
+  border-color: var(--red);
+  color: var(--red);
+}
+
+/* 缺口格子 */
+.cell.gap {
+  border-style: dashed;
+  border-color: var(--red);
+  background: rgba(164, 64, 55, 0.06);
+  color: var(--red);
+}
+
+.gap-tag {
+  font-size: 16px;
+  font-weight: 800;
+  line-height: 1;
+}
+
+/* 草稿冲突与缺口 */
+.draft-item.conflict {
+  border-color: var(--red);
+  background: rgba(164, 64, 55, 0.06);
+}
+
+.draft-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+}
+
+.draft-badges {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px;
+}
+
+.draft-badges .badge {
+  padding: 4px 8px;
+  font-size: 11px;
+}
+
+.draft-shortages {
+  color: var(--red);
+  font-size: 12px;
+  font-weight: 700;
+}
+
+/* 字模卡数量编辑 */
+.type-card-actions {
+  display: flex;
+  gap: 4px;
+}
+
+.qty-editor {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-top: 4px;
+}
+
+.qty-editor label {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  color: var(--muted);
+  font-size: 12px;
+}
+
+.qty-editor input {
+  width: 56px;
+  padding: 4px 6px;
+}
+
+.qty-editor button {
+  padding: 4px 8px;
+  font-size: 12px;
+}
+
+.qty-out {
+  color: var(--red);
+  font-style: normal;
+  font-weight: 800;
+}
